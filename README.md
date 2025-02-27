@@ -13,7 +13,7 @@ src ：源码目录
     |---components ：组件（XXX.vue）
     |---assets ：    容易变更的静态资源 （字体、图片、icon图标）
     |---App.vue ：   项目的根组件，index.html通过挂载main.js来完成对App.vue在html的渲染，同时
-    App.vue作为components的父组件，可以调用子组件
+        App.vue作为components的父组件，可以调用子组件
     |---router：     路由配置
     |---store：      Vuex状态管理
     |---view：       页面视图
@@ -23,6 +23,6 @@ src ：源码目录
 ```
 ## 注意事项
 - 请不要修改`package.json`中的`name`和`version`，否则会导致依赖安装失败
-- 
+  
 - 请不要修改`public`目录下的文件名，否则会导致静态资源加载失败 
-- 
+
