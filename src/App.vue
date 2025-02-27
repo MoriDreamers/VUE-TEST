@@ -15,16 +15,30 @@ const modify = (value) => {
   <div>
 
   </div>
+
+<!-- slot插槽 -->
   <slotDemo>
-    <p>
-      这是通过插槽实现的页面
-    </p>
+    <template v-slot:header>
+      <p>这是插入到header的定义</p>
+    </template>
+    <template #footer>
+      <p>这是插入到footer的定义</p>
+    </template>
+    <template #aside>
+      <div style="background-color: #f0f0f0;">
+        <p>这是插入到aside的定义</p>
+      </div>
+    </template>
   </slotDemo>
+
   <p>这是通过子组件输入框向父组件传值的例子，值为{{ postvalue }}</p>
+
   <Message :value="postvalue" @change-value="modify"></Message>
+
   <HelloWorld msg="Vite + Vue" />
-  <!-- 传入的是string 使用：来做一个绑定 -->
-  <buttonCounter :step="56"></buttonCounter>
+
+  <!-- 传入的是string 使用：来做一个绑定，即可转换为数字 -->
+  <buttonCounter :step="114514"></buttonCounter>
 </template>
 
 <style scoped>

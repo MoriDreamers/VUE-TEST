@@ -4,8 +4,15 @@
 
 <template>
     <div>
-        <slot>
-            <p>默认值</p>
+        <slot name="header">
+            <p >默认值1</p>
+        </slot>
+
+        <slot name="footer">
+            <p >默认值2</p>
+        </slot>
+        <slot name="aside">
+            <p >默认值3</p>
         </slot>
     </div>
 </template>
