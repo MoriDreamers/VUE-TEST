@@ -1,5 +1,5 @@
-# VUE-TEST
-基于VUE开发的基础脚手架工程，自用
+# VUE-NORMEL
+VUE基础学习
 
 ## 目录结构
 ```
