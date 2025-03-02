@@ -13,7 +13,7 @@
 
 //父组件向子组件传参
     const props = defineProps({
-        textTest:{
+        value:{
             type : Number,
         default : 1008611,
         validator:function(value){

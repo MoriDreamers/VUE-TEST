@@ -4,6 +4,8 @@ import Message from './components/Message.vue';
 import buttonCounter from './components/buttonCounter.vue';
 import slotDemo from './components/slotDemo.vue';
 import { ref } from 'vue'
+import Provideinject from './components/Provideinject.vue'
+import lifeCycle from './components/lifeCycle.vue';
 const postvalue = ref("")
 const modify = (value) => {
   //接收参数更改
@@ -15,6 +17,10 @@ const modify = (value) => {
   <div>
 
   </div>
+<lifeCycle></lifeCycle>
+<Provideinject></Provideinject>
+
+  <hr/>
 
 <!-- slot插槽 -->
   <slotDemo>
@@ -32,13 +38,13 @@ const modify = (value) => {
   </slotDemo>
 
   <p>这是通过子组件输入框向父组件传值的例子，值为{{ postvalue }}</p>
-
-  <Message :value="postvalue" @change-value="modify"></Message>
+  <Message  :value=1 @change-value="modify"></Message>
 
   <HelloWorld msg="Vite + Vue" />
 
   <!-- 传入的是string 使用：来做一个绑定，即可转换为数字 -->
-  <buttonCounter :step="114514"></buttonCounter>
+  <buttonCounter :step.value=114514></buttonCounter>
+  <!--VUE理应弹出警告，因为传入的数值大于判断条件（114514>50）-->
 </template>
 
 <style scoped>
