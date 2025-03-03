@@ -1,17 +1,43 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+//通过内置函数的方式来实现路由跳转
+//import { useRoute } from 'vue-router';
+//const router = useRoute();
+//定义一个通过js的路由跳转方法
+import router from './router/index.js'
+
+const user = () =>{
+  //router.push("users/常夏")
+  //通过对象跳转路由，并且传递参数
+  router.push({
+    //name绑定路由名
+    name:"users",
+    params:{
+      id:'洛瑶',
+      username:'常夏',
+    },
+    //query是传参
+    query:{
+      limit:"18",
+      dates:"8-32",
+    }
+  })
+}
 </script>
 
 <template>
+  <h1>hello router!</h1>
   <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+    <p><RouterLink to = "/" replace>GO TO INDEX</RouterLink></p>
+    <!-- repalce表示禁止回退 -->
+    <p><RouterLink to = "/about">GO TO ABOUT</RouterLink></p>
+    <p><RouterLink to = "/home">GO TO HOME</RouterLink></p>
+  
+   
   </div>
-  <HelloWorld msg="Vite + Vue" />
+<!--路由出口，路由所渲染的组件将匹配到routerview这里-->
+<RouterView></RouterView>
+<button type="button" @click="user()">点击跳转用户页</button>
+
 </template>
 
 <style scoped>

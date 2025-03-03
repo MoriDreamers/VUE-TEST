@@ -21,4 +21,15 @@ watch 观察者模式，可以观察数据的变化，并执行相应的函数
 
 #什么事pinia？
 具有存储数据的作用 这个数据可以在任意的页面或组件中使用 
-使用的场景：1.用户登录状态 2.应用程序设置 3.共享数据 4.全局状态  
+使用的场景：1.用户登录状态 2.应用程序设置 3.共享数据 4.全局状态
+
+#router
+工程化操作 在router/index.js中写入路由规则,引入相关需要渲染的vue组件（views/XXX.vue） 同时导出 export router 
+main.js 引入router/index.js导出的router 即挂载到app上 app.use(router)
+```
+<!-- 超链接路由跳转（新版本写法） -->
+<RouterLink to = "/" replace>GO TO INDEX</RouterLink>
+<!-- repalce表示禁止回退 -->
+<!--路由出口，路由所渲染的组件将匹配到routerview这里-->
+<RouterView></RouterView>
+```
