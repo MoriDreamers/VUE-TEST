@@ -31,7 +31,8 @@ const user = () =>{
     <!-- repalce表示禁止回退 -->
     <p><RouterLink to = "/about">GO TO ABOUT</RouterLink></p>
     <p><RouterLink to = "/home">GO TO HOME</RouterLink></p>
-  
+    <p><RouterLink to = "/list">GO TO LIST</RouterLink></p>
+    <p><RouterLink to = "/list/TestOne">子路由1</RouterLink></p>
    
   </div>
 <!--路由出口，路由所渲染的组件将匹配到routerview这里-->
