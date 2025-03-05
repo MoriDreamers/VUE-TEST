@@ -25,7 +25,9 @@ watch 观察者模式，可以观察数据的变化，并执行相应的函数
 
 #router
 工程化操作 在router/index.js中写入路由规则,引入相关需要渲染的vue组件（views/XXX.vue） 同时导出 export router 
+
 main.js 引入router/index.js导出的router 即挂载到app上 app.use(router)
+
 ```
 <!-- 超链接路由跳转（新版本写法） -->
 <RouterLink to = "/" replace>GO TO INDEX</RouterLink>
@@ -33,3 +35,6 @@ main.js 引入router/index.js导出的router 即挂载到app上 app.use(router)
 <!--路由出口，路由所渲染的组件将匹配到routerview这里-->
 <RouterView></RouterView>
 ```
+
+#什么事axios
+一个http请求库，用于发送网络请求

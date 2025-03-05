@@ -4,6 +4,8 @@
 //const router = useRoute();
 //定义一个通过js的路由跳转方法
 import router from './router/index.js'
+//导入axios组件
+import AxiosDemo from './components/AxiosDemo.vue'
 
 const user = () =>{
   //router.push("users/常夏")
@@ -38,7 +40,7 @@ const user = () =>{
 <!--路由出口，路由所渲染的组件将匹配到routerview这里-->
 <RouterView></RouterView>
 <button type="button" @click="user()">点击跳转用户页</button>
-
+<AxiosDemo></AxiosDemo>
 </template>
 
 <style scoped>
